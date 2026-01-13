@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import CountdownTimer from '@/components/CountdownTimer';
@@ -13,6 +12,8 @@ import {
   Heart,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import React, { useState } from 'react';
+
 
 function formatNama(slug: string) {
   return slug
