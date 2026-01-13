@@ -40,9 +40,9 @@ export default function RootLayout({
         <Image
           src="/Logo Bisukma Group.svg"
           alt="Bisukma Group Logo"
-          width={100}
-          height={100}
-          className="absolute top-8 left-8 z-10"
+          width={120}
+          height={120}
+          className="absolute top-4 left-4 z-10"
         />
         {children}
         <Toaster />
