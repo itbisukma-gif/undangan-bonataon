@@ -19,6 +19,9 @@ export default function HomePage() {
       <h1 className="font-modern text-4xl font-black uppercase text-white md:text-6xl">
         BISUKMA GROUP
       </h1>
+      <p className="font-modern mt-2 text-lg font-bold text-white md:text-xl">
+        Bergerak dan Bangkit bersama
+      </p>
       <Button
         className="mt-8 rounded-full border-transparent text-white hover:bg-[#9c762a]"
         style={{ backgroundColor: '#ad8330' }}
