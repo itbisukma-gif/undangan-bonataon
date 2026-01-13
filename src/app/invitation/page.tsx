@@ -33,7 +33,7 @@ export default function InvitationPage() {
               Hitung mundur acara bonataon
             </h2>
             <CountdownTimer targetDate={targetDate} />
-            <div className="mt-8 w-full overflow-hidden rounded-lg border border-white/20">
+            <div className="mt-8 w-auto overflow-hidden rounded-lg border border-white/20">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1993.619052272326!2d98.93229656491332!3d2.0606891897219195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x302e6c0d31f20d6d%3A0xb08cd153fd20acc6!2sAuditorium%20HKBP%20(Seminarium%20Sipoholon)!5e0!3m2!1sid!2sid!4v1768305105960!5m2!1sid!2sid"
                 width="100%"
