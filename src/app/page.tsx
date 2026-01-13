@@ -7,12 +7,12 @@ export default function HomePage() {
     <div className="flex min-h-screen w-full flex-col">
       <Header />
       <main className="flex flex-grow flex-col items-center justify-center text-center">
-        <h1 className="font-handwriting text-7xl text-white">
+        <p className="font-handwriting text-2xl text-white/90">
           Undangan Bona Taon
-        </h1>
-        <p className="font-modern mt-4 text-2xl tracking-widest text-white/90">
-          BISUKMA GROUP
         </p>
+        <h1 className="font-modern mt-2 text-7xl font-black tracking-wider text-white">
+          BISUKMA GROUP
+        </h1>
       </main>
     </div>
   );
