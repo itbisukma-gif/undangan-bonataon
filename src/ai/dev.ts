@@ -1,4 +1,4 @@
 import { config } from 'dotenv';
 config();
 
-import '@/ai/flows/generate-design-drafts.ts';
+import '@/ai/flows/invitationFlow.ts';
