@@ -89,13 +89,13 @@ export default function InvitationPage() {
               sebuah kehormatan bagi kami.
             </p>
             <div className="mt-8 space-y-2">
-              <p className="text-base italic font-extralight">Yang akan diselenggarakan Pada</p>
+              <p className="text-sm italic font-extralight">Yang akan diselenggarakan Pada</p>
               <h2 className="text-3xl font-bold">17 Januari 2026</h2>
               <div className="flex items-center justify-center gap-2">
                 <Clock className="h-6 w-6" />
                 <p className="text-lg font-semibold">Pada pukul 09:00 WIB</p>
               </div>
-              <p className="mt-4 text-base italic font-extralight">Yang beralamat di :</p>
+              <p className="mt-4 text-sm italic font-extralight">Yang beralamat di :</p>
               <p className="max-w-md text-base font-semibold text-white/90">
                 Auditorium HKBP Sipolon Desa Simanungkalit, Kecamatan Sipoholon,
                 Kabupaten Tapanuli Utara, Sumatera Utara 22452
@@ -124,6 +124,7 @@ export default function InvitationPage() {
         height={80}
         className="absolute bottom-8 right-8"
       />
+      <a href="https://lordicon.com/" className="absolute bottom-2 right-2 text-xs text-white/50" target="_blank" rel="noopener noreferrer">Icons by Lordicon.com</a>
     </div>
   );
 }
