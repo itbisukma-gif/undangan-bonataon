@@ -1,7 +1,12 @@
+'use client';
+
+import { Header } from '@/components/header';
+
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold">Halo Dunia</h1>
+    <div className="flex min-h-screen w-full flex-col">
+      <Header />
+      <main className="flex-grow"></main>
     </div>
   );
 }
