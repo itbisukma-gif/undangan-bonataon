@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 
 export default function HomePage() {
@@ -18,6 +19,7 @@ export default function HomePage() {
       <h1 className="font-modern text-4xl font-black uppercase text-white md:text-6xl">
         BISUKMA GROUP
       </h1>
+      <Button className="mt-8">Buka undangan</Button>
     </div>
   );
 }
