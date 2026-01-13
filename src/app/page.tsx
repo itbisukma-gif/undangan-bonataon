@@ -28,7 +28,7 @@ export default function HomePage() {
         </p>
       </div>
       <Button
-        className="mt-8 rounded-full border-transparent text-white hover:bg-[#9c762a]"
+        className="mt-8 rounded-full border-transparent font-normal text-white hover:bg-[#9c762a]"
         style={{ backgroundColor: '#ad8330' }}
       >
         Buka undangan
@@ -36,9 +36,9 @@ export default function HomePage() {
       <Image
         src="/2026.svg"
         alt="2026"
-        width={100}
-        height={100}
-        className="absolute bottom-4 right-4"
+        width={80}
+        height={80}
+        className="absolute bottom-8 right-8"
       />
     </div>
   );
