@@ -22,6 +22,9 @@ export default function HomePage() {
       <p className="font-modern mt-2 text-lg font-bold text-white md:text-xl">
         Bergerak dan Bangkit bersama
       </p>
+      <p className="font-modern mt-1 text-base text-white md:text-lg">
+        Meraih Harapan Melalui Kolaborasi
+      </p>
       <Button
         className="mt-8 rounded-full border-transparent text-white hover:bg-[#9c762a]"
         style={{ backgroundColor: '#ad8330' }}
