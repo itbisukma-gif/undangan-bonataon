@@ -187,6 +187,11 @@ export default function InvitationPage() {
               Kehadiran Anda sangat berarti bagi kami. Sampai jumpa di acara!
             </p>
             <p className="font-tangerine text-5xl text-[#ad8330] mt-8">Bisukma Group</p>
+            <div className="mt-4 flex items-center justify-center gap-4">
+              <Image src="/1.svg" alt="Sponsor 1" width={80} height={80} />
+              <Image src="/2.svg" alt="Sponsor 2" width={80} height={80} />
+              <Image src="/3.svg" alt="Sponsor 3" width={80} height={80} />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
