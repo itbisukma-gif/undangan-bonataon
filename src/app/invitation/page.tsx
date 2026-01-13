@@ -46,7 +46,7 @@ export default function InvitationPage() {
               ></iframe>
             </div>
             <a
-              href="https://maps.app.goo.gl/qjFqCzqjGzXf7Qz48"
+              href="https://maps.app.goo.gl/nEchFx8eqK5wrFgQ6"
               target="_blank"
               rel="noopener noreferrer"
             >
