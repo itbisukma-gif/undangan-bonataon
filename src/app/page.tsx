@@ -1,8 +1,17 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function HomePage() {
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-center p-4 text-center">
+      <Image
+        src="/elegan-shape.svg"
+        alt="Elegant Shape"
+        width={200}
+        height={100}
+        className="mb-4"
+      />
       <h2 className="font-tangerine text-5xl text-yellow-300 md:text-7xl">
         Undangan Bona Taon
       </h2>
