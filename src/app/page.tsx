@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -57,7 +58,10 @@ export default function HomePage() {
         >
           BISUKMA GROUP
         </motion.h1>
-        <motion.div variants={itemVariants} className="mt-4 flex flex-col items-center">
+        <motion.div
+          variants={itemVariants}
+          className="mt-4 flex flex-col items-center"
+        >
           <p className="font-modern text-lg font-semibold uppercase text-white md:text-xl">
             Bergerak dan Bangkit bersama
           </p>
@@ -66,12 +70,14 @@ export default function HomePage() {
           </p>
         </motion.div>
         <motion.div variants={itemVariants}>
-          <Button
-            className="mt-8 rounded-full border-transparent font-normal text-white hover:bg-[#9c762a]"
-            style={{ backgroundColor: '#ad8330' }}
-          >
-            Buka undangan
-          </Button>
+          <Link href="/invitation">
+            <Button
+              className="mt-8 rounded-full border-transparent font-normal text-white hover:bg-[#9c762a]"
+              style={{ backgroundColor: '#ad8330' }}
+            >
+              Buka undangan
+            </Button>
+          </Link>
         </motion.div>
       </motion.div>
       <Image
