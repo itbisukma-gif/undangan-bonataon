@@ -2,12 +2,12 @@
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center text-center">
-      <h2 className="font-tangerine text-7xl text-yellow-300">
+    <div className="flex min-h-screen w-full flex-col items-center justify-center p-4 text-center">
+      <h2 className="font-tangerine text-5xl text-yellow-300 md:text-7xl">
         Undangan Bona Taon
       </h2>
-      <h1 className="font-modern text-6xl font-black text-white">
-        Bisukma Group
+      <h1 className="font-modern text-4xl font-black uppercase text-white md:text-6xl">
+        BISUKMA GROUP
       </h1>
     </div>
   );
