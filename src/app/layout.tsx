@@ -3,6 +3,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { Inter, Poppins, Tangerine } from 'next/font/google';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const tangerine = Tangerine({
@@ -30,12 +31,19 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          'min-h-screen bg-background font-sans antialiased',
+          'relative min-h-screen bg-background font-sans antialiased',
           inter.variable,
           tangerine.variable,
           poppins.variable
         )}
       >
+        <Image
+          src="/Logo Bisukma Group.svg"
+          alt="Bisukma Group Logo"
+          width={100}
+          height={100}
+          className="absolute top-8 left-8 z-10"
+        />
         {children}
         <Toaster />
       </body>
