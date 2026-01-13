@@ -11,7 +11,10 @@ export default function InvitationPage() {
 
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center p-4 text-center text-white">
-      <div className="mb-8 rounded-lg border border-white/50 bg-white/10 p-4">
+      <div
+        className="mb-8 rounded-lg border bg-white/10 p-4"
+        style={{ borderColor: '#ad8330' }}
+      >
         <p className="text-lg">Yang terhormat</p>
         <p className="text-2xl font-bold">"Nama undangan"</p>
       </div>
