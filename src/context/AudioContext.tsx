@@ -32,7 +32,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
           setIsPlaying(true);
         } catch (error) {
           if (error instanceof DOMException && error.name === 'NotSupportedError') {
-            console.error(
+            console.warn(
               'Audio playback failed: The source file ("/music.mp3") is likely missing or in an unsupported format. Please add the audio file to the /public directory.'
             );
           } else {
