@@ -1,3 +1,46 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "user-avatar",
+      "description": "User avatar for header",
+      "imageUrl": "https://images.unsplash.com/photo-1725028748781-7adb1df9a943?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwZmFjZXxlbnwwfHx8fDE3NjgyMTcxNDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person face"
+    },
+    {
+      "id": "event-design-1",
+      "description": "Sample event design 1",
+      "imageUrl": "https://images.unsplash.com/photo-1592758080692-b6a5dbe9c725?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25mZXJlbmNlJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3NjgyOTQ5NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "conference technology"
+    },
+    {
+      "id": "event-design-2",
+      "description": "Sample event design 2",
+      "imageUrl": "https://images.unsplash.com/photo-1656761961817-fc9bad62f5df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhd2FyZHMlMjBjZXJlbW9ueXxlbnwwfHx8fDE3NjgyOTQ5NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "awards ceremony"
+    },
+    {
+      "id": "invitation-background",
+      "description": "Background for a sample invitation",
+      "imageUrl": "https://images.unsplash.com/photo-1519010470956-6d877008eaa4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaXR5c2NhcGUlMjBuaWdodHxlbnwwfHx8fDE3NjgyOTE2ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cityscape night"
+    },
+    {
+      "id": "ai-design-1-portrait",
+      "description": "AI generated design in portrait",
+      "imageUrl": "https://images.unsplash.com/photo-1498262257252-c282316270bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhYnN0cmFjdCUyMGRlc2lnbnxlbnwwfHx8fDE3NjgyMDA3ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract design"
+    },
+    {
+      "id": "ai-design-2-landscape",
+      "description": "AI generated design in landscape",
+      "imageUrl": "https://images.unsplash.com/photo-1624324420083-c0323419f1d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxuYXR1cmUlMjBwYXR0ZXJufGVufDB8fHx8MTc2ODI5NDk1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nature pattern"
+    },
+    {
+      "id": "ai-design-3-portrait",
+      "description": "Another AI generated design in portrait",
+      "imageUrl": "https://images.unsplash.com/photo-1486551937199-baf066858de7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxnZW9tZXRyaWMlMjBzaGFwZXN8ZW58MHx8fHwxNzY4MjQzMTU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "geometric shapes"
+    }
+  ]
 }
