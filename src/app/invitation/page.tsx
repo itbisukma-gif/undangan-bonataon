@@ -34,7 +34,7 @@ export default function InvitationPage() {
             </h2>
             <CountdownTimer targetDate={targetDate} />
             <h3 className="mt-8 mb-2 text-lg font-semibold">Lokasi Acara</h3>
-            <div className="w-auto overflow-hidden rounded-lg border border-white/20">
+            <div className="w-full max-w-xs overflow-hidden rounded-lg border border-white/20">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1993.619052272326!2d98.93229656491332!3d2.0606891897219195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x302e6c0d31f20d6d%3A0xb08cd153fd20acc6!2sAuditorium%20HKBP%20(Seminarium%20Sipoholon)!5e0!3m2!1sid!2sid!4v1768305105960!5m2!1sid!2sid"
                 width="100%"
@@ -91,9 +91,9 @@ export default function InvitationPage() {
             <div className="mt-8 space-y-2">
               <p className="text-base">Yang akan diselenggarakan Pada</p>
               <h2 className="text-3xl font-bold">17 Januari 2026</h2>
-              <p className="text-lg">Pada pukul 09:00 WIB</p>
+              <p className="text-lg font-semibold">Pada pukul 09:00 WIB</p>
               <p className="mt-4 text-base">Yang beralamat di :</p>
-              <p className="max-w-md text-base text-white/90">
+              <p className="max-w-md text-base font-semibold text-white/90">
                 Auditorium HKBP Sipolon Desa Simanungkalit, Kecamatan Sipoholon,
                 Kabupaten Tapanuli Utara, Sumatera Utara 22452
               </p>
