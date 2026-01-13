@@ -30,8 +30,15 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
         try {
           await audioRef.current.play();
           setIsPlaying(true);
-        } catch (e) {
-          console.error('Autoplay was prevented.', e);
+        } catch (error) {
+          if (error instanceof DOMException && error.name === 'NotSupportedError') {
+            console.error(
+              'Audio playback failed: The source file ("/music.mp3") is likely missing or in an unsupported format. Please add the audio file to the /public directory.'
+            );
+          } else {
+            console.error('Audio playback was prevented.', error);
+          }
+          setIsPlaying(false); // Ensure state is correct on error
         }
     }
   };
