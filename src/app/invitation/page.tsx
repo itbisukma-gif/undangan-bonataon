@@ -66,10 +66,13 @@ export default function InvitationPage() {
               ini. Kehadiran dan partisipasi bapak/ibu dalam acara ini adalah
               sebuah kehormatan bagi kami.
             </p>
+            <p className="mt-8 text-sm text-white/80">
+              ketuk untuk detail Acara
+            </p>
             <Button
               variant="ghost"
               size="icon"
-              className="mt-8 rounded-full text-white"
+              className="mt-2 rounded-full text-white"
               onClick={() => setShowCountdown(true)}
             >
               <ArrowDown className="h-6 w-6" />
