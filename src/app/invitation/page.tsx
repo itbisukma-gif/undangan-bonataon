@@ -89,10 +89,10 @@ export default function InvitationPage() {
               sebuah kehormatan bagi kami.
             </p>
             <div className="mt-8 space-y-2">
-              <p className="text-base">Yang akan diselenggarakan Pada</p>
+              <p className="text-base italic font-extralight">Yang akan diselenggarakan Pada</p>
               <h2 className="text-3xl font-bold">17 Januari 2026</h2>
               <p className="text-lg font-semibold">Pada pukul 09:00 WIB</p>
-              <p className="mt-4 text-base">Yang beralamat di :</p>
+              <p className="mt-4 text-base italic font-extralight">Yang beralamat di :</p>
               <p className="max-w-md text-base font-semibold text-white/90">
                 Auditorium HKBP Sipolon Desa Simanungkalit, Kecamatan Sipoholon,
                 Kabupaten Tapanuli Utara, Sumatera Utara 22452
