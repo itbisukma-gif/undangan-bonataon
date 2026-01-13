@@ -13,18 +13,20 @@ export default function HomePage() {
         height={100}
         className="mb-4"
       />
-      <h2 className="font-tangerine text-5xl text-[#ad8330] md:text-7xl">
+      <h2 className="font-tangerine text-6xl text-[#ad8330] md:text-8xl">
         Undangan Bona Taon
       </h2>
-      <h1 className="font-modern text-4xl font-black uppercase text-white md:text-6xl">
+      <h1 className="font-modern text-5xl font-black uppercase text-white md:text-7xl">
         BISUKMA GROUP
       </h1>
-      <p className="font-modern mt-2 text-lg font-bold text-white md:text-xl">
-        Bergerak dan Bangkit bersama
-      </p>
-      <p className="font-modern mt-1 text-base text-white md:text-lg">
-        Meraih Harapan Melalui Kolaborasi
-      </p>
+      <div className="mt-4 flex flex-col items-center">
+        <p className="font-modern text-lg font-bold text-white md:text-xl">
+          Bergerak dan Bangkit bersama
+        </p>
+        <p className="font-modern text-base text-white/90 md:text-lg">
+          Meraih Harapan Melalui Kolaborasi
+        </p>
+      </div>
       <Button
         className="mt-8 rounded-full border-transparent text-white hover:bg-[#9c762a]"
         style={{ backgroundColor: '#ad8330' }}
