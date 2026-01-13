@@ -8,7 +8,7 @@ import { ArrowDown, ArrowUp, Navigation } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function InvitationPage() {
-  const targetDate = '2026-01-17T00:00:00';
+  const targetDate = '2026-01-17T09:00:00';
   const [showCountdown, setShowCountdown] = useState(false);
 
   const containerVariants = {
@@ -88,6 +88,16 @@ export default function InvitationPage() {
               ini. Kehadiran dan partisipasi bapak/ibu dalam acara ini adalah
               sebuah kehormatan bagi kami.
             </p>
+            <div className="mt-8 space-y-2">
+              <p className="text-lg">Yang akan diselenggarakan Pada</p>
+              <h2 className="text-3xl font-bold">17 Januari 2026</h2>
+              <p className="text-lg">Pada pukul 09:00 WIB</p>
+              <p className="mt-4 text-lg">Yang beralamat di :</p>
+              <p className="max-w-md text-base text-white/90">
+                Auditorium HKBP Sipolon Desa Simanungkalit, Kecamatan Sipoholon,
+                Kabupaten Tapanuli Utara, Sumatera Utara 22452
+              </p>
+            </div>
             <p className="mt-8 text-sm text-white/80">
               ketuk untuk detail Acara
             </p>
