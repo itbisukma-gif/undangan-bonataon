@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import CountdownTimer from '@/components/CountdownTimer';
 import { motion, AnimatePresence, PanInfo } from 'framer-motion';
@@ -13,7 +14,14 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+function titleCase(str: string) {
+  return str.replace(/\b\w/g, char => char.toUpperCase());
+}
+
 export default function InvitationPage() {
+  const searchParams = useSearchParams();
+  const namaTamu = searchParams.get('to') ?? 'Bapak / Ibu';
+
   const targetDate = '2026-01-17T09:00:00+07:00';
   const [currentView, setCurrentView] = useState(0); // 0: Invitation, 1: Countdown, 2: Thank You
 
@@ -57,7 +65,9 @@ export default function InvitationPage() {
           >
             <div className="mb-8 inline-block rounded-lg border bg-white/10 p-4" style={{ borderColor: '#ad8330' }}>
               <p className="text-lg">Yang terhormat</p>
-              <p className="text-2xl font-bold">"Nama undangan"</p>
+              <p className="text-2xl font-bold">
+                {titleCase(decodeURIComponent(namaTamu))}
+              </p>
             </div>
 
             <h1 className="text-4xl font-bold">Kami dari Bisukma Group</h1>
