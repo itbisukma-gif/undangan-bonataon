@@ -31,6 +31,13 @@ const itemVariants = {
 export default function HomePage() {
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden p-4 text-center">
+      <Image
+        src="/Logo Bisukma Group.svg"
+        alt="Bisukma Group Logo"
+        width={100}
+        height={100}
+        className="absolute top-8 left-8"
+      />
       <motion.div
         variants={containerVariants}
         initial="hidden"
