@@ -20,7 +20,7 @@ export default function HomePage() {
         BISUKMA GROUP
       </h1>
       <div className="mt-4 flex flex-col items-center">
-        <p className="font-modern text-lg font-bold text-white md:text-xl">
+        <p className="font-modern text-lg font-semibold uppercase text-white md:text-xl">
           Bergerak dan Bangkit bersama
         </p>
         <p className="font-modern text-base text-white/90 md:text-lg">
