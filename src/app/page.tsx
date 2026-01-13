@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -29,6 +30,9 @@ const itemVariants = {
 };
 
 export default function HomePage() {
+  const searchParams = useSearchParams();
+  const namaTamu = searchParams.get('to');
+
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden p-4 text-center">
       <motion.div
@@ -71,7 +75,13 @@ export default function HomePage() {
           </p>
         </motion.div>
         <motion.div variants={itemVariants}>
-          <Link href="/invitation">
+          <Link
+            href={
+              namaTamu
+                ? `/invitation?to=${encodeURIComponent(namaTamu)}`
+                : '/invitation'
+            }
+          >
             <Button
               className="mt-8 rounded-full border-transparent font-normal text-white hover:bg-[#9c762a]"
               style={{ backgroundColor: '#ad8330' }}
