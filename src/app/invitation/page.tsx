@@ -8,7 +8,7 @@ import { ArrowDown, ArrowUp, Navigation } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function InvitationPage() {
-  const targetDate = '2026-01-17T09:00:00';
+  const targetDate = '2026-01-17T09:00:00+07:00';
   const [showCountdown, setShowCountdown] = useState(false);
 
   const containerVariants = {
