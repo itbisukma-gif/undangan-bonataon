@@ -11,14 +11,18 @@ export default function InvitationPage() {
 
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center p-4 text-center text-white">
-      <p className="mb-2 text-lg font-semibold">Hitung mundur acara bonataon</p>
-      <CountdownTimer targetDate={targetDate} />
       <h1 className="text-4xl font-bold mt-8">Kami dari Bisukma Group</h1>
       <p className="mt-4 max-w-2xl">
         Mengundang Bapak/Ibu untuk hadir dan memeriahkan acara Bona Taon ini.
         Kehadiran dan partisipasi bapak/ibu dalam acara ini adalah sebuah
         kehormatan bagi kami.
       </p>
+      <div className="mt-12">
+        <p className="mb-2 text-lg font-semibold">
+          Hitung mundur acara bonataon
+        </p>
+        <CountdownTimer targetDate={targetDate} />
+      </div>
       <Image
         src="/2026.svg"
         alt="2026"
