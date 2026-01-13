@@ -46,7 +46,7 @@ export default function InvitationPage() {
               ></iframe>
             </div>
             <a
-              href="https://maps.app.goo.gl/nEchFx8eqK5wrFgQ6"
+              href="https://www.google.com/maps/search/?api=1&query=Auditorium+HKBP+Seminarium+Sipoholon"
               target="_blank"
               rel="noopener noreferrer"
             >
