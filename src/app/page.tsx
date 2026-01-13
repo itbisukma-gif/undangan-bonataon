@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center p-4 text-center">
+    <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden p-4 text-center">
       <Image
         src="/elegan-shape.svg"
         alt="Elegant Shape"
@@ -33,6 +33,13 @@ export default function HomePage() {
       >
         Buka undangan
       </Button>
+      <Image
+        src="/2026.svg"
+        alt="2026"
+        width={200}
+        height={200}
+        className="absolute bottom-0 right-0"
+      />
     </div>
   );
 }
