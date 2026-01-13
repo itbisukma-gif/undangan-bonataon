@@ -36,9 +36,9 @@ export default function HomePage() {
       <Image
         src="/2026.svg"
         alt="2026"
-        width={150}
-        height={150}
-        className="absolute bottom-0 right-0"
+        width={100}
+        height={100}
+        className="absolute bottom-4 right-4"
       />
     </div>
   );
