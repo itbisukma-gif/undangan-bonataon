@@ -5,6 +5,7 @@ import { Inter, Poppins, Tangerine } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
+import { AudioProvider } from '@/context/AudioContext';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const tangerine = Tangerine({
@@ -38,18 +39,20 @@ export default function RootLayout({
           poppins.variable
         )}
       >
-        <Link href="/">
-          <Image
-            src="/Logo Bisukma Group.svg"
-            alt="Bisukma Group Logo"
-            width={120}
-            height={120}
-            className="absolute top-4 left-4 z-10"
-            priority
-          />
-        </Link>
-        {children}
-        <Toaster />
+        <AudioProvider>
+          <Link href="/">
+            <Image
+              src="/Logo Bisukma Group.svg"
+              alt="Bisukma Group Logo"
+              width={120}
+              height={120}
+              className="absolute top-4 left-4 z-10"
+              priority
+            />
+          </Link>
+          {children}
+          <Toaster />
+        </AudioProvider>
       </body>
     </html>
   );

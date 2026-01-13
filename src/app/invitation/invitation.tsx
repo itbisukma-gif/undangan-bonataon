@@ -10,17 +10,18 @@ import {
   Navigation,
   Clock,
   Heart,
+  Volume2,
+  VolumeX,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import React, { useState } from 'react';
-
+import { useAudio } from '@/context/AudioContext';
 
 function formatNama(slug: string) {
   return slug
     .replace(/-/g, ' ')
     .replace(/\b\w/g, char => char.toUpperCase());
 }
-
 
 export default function Invitation() {
   const searchParams = useSearchParams();
@@ -32,6 +33,8 @@ export default function Invitation() {
 
   const targetDate = '2026-01-17T09:00:00+07:00';
   const [currentView, setCurrentView] = useState(0); // 0: Invitation, 1: Countdown, 2: Thank You
+
+  const { isPlaying, pause, play } = useAudio();
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -58,6 +61,16 @@ export default function Invitation() {
 
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden p-4 text-center text-white">
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={() => (isPlaying ? pause() : play())}
+        className="fixed top-4 right-4 z-50 rounded-full text-white hover:bg-white/20"
+      >
+        {isPlaying ? <Volume2 /> : <VolumeX />}
+        <span className="sr-only">Mute/Unmute Music</span>
+      </Button>
+
       <AnimatePresence mode="wait">
         {currentView === 0 && (
           <motion.div

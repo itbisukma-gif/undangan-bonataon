@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
+import { useAudio } from '@/context/AudioContext';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -32,6 +33,7 @@ const itemVariants = {
 export default function HomePage() {
   const searchParams = useSearchParams();
   const namaTamu = searchParams.get('to');
+  const { play } = useAudio();
 
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden p-4 text-center">
@@ -83,6 +85,7 @@ export default function HomePage() {
             }
           >
             <Button
+              onClick={play}
               className="mt-8 rounded-full border-transparent font-normal text-white hover:bg-[#9c762a]"
               style={{ backgroundColor: '#ad8330' }}
             >
