@@ -14,7 +14,7 @@ import {
   VolumeX,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAudio } from '@/context/AudioContext';
 
 function formatNama(slug: string) {
@@ -35,6 +35,11 @@ export default function Invitation() {
   const [currentView, setCurrentView] = useState(0); // 0: Invitation, 1: Countdown, 2: Thank You
 
   const { isPlaying, pause, play } = useAudio();
+
+  useEffect(() => {
+    play();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
