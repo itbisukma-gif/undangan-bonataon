@@ -36,8 +36,8 @@ export default function HomePage() {
       <Image
         src="/2026.svg"
         alt="2026"
-        width={200}
-        height={200}
+        width={150}
+        height={150}
         className="absolute bottom-0 right-0"
       />
     </div>
