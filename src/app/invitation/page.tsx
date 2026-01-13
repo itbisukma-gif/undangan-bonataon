@@ -11,6 +11,7 @@ export default function InvitationPage() {
 
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center p-4 text-center text-white">
+      <p className="mb-2 text-lg font-semibold">Hitung mundur acara bonataon</p>
       <CountdownTimer targetDate={targetDate} />
       <h1 className="text-4xl font-bold mt-8">Halaman Undangan</h1>
       <p className="mt-4 max-w-2xl">
