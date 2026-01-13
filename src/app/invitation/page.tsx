@@ -75,7 +75,7 @@ export default function InvitationPage() {
             exit="exit"
           >
             <div
-              className="mb-8 rounded-lg border bg-white/10 p-4"
+              className="mb-8 inline-block rounded-lg border bg-white/10 p-4"
               style={{ borderColor: '#ad8330' }}
             >
               <p className="text-lg">Yang terhormat</p>
