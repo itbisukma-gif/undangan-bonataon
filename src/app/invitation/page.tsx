@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import CountdownTimer from '@/components/CountdownTimer';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, PanInfo } from 'framer-motion';
 import { ArrowDown, ArrowUp, Navigation, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -16,6 +16,18 @@ export default function InvitationPage() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
     exit: { opacity: 0, y: -50, transition: { duration: 0.8 } },
   };
+  
+  const handleDragEnd = (
+    event: MouseEvent | TouchEvent | PointerEvent,
+    info: PanInfo
+  ) => {
+    if (info.offset.y < -50) {
+      setShowCountdown(true);
+    } else if (info.offset.y > 50 && showCountdown) {
+      setShowCountdown(false);
+    }
+  };
+
 
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden p-4 text-center text-white">
@@ -28,6 +40,9 @@ export default function InvitationPage() {
             initial="hidden"
             animate="visible"
             exit="exit"
+            drag="y"
+            dragConstraints={{ top: 0, bottom: 0 }}
+            onDragEnd={handleDragEnd}
           >
             <h2 className="mb-4 text-lg font-semibold">
               Hitung mundur acara bonataon
@@ -73,6 +88,9 @@ export default function InvitationPage() {
             initial="hidden"
             animate="visible"
             exit="exit"
+            drag="y"
+            dragConstraints={{ top: 0, bottom: 0 }}
+            onDragEnd={handleDragEnd}
           >
             <div
               className="mb-8 inline-block rounded-lg border bg-white/10 p-4"
@@ -102,7 +120,7 @@ export default function InvitationPage() {
               </p>
             </div>
             <p className="mt-8 text-sm text-white/80">
-              ketuk untuk detail Acara
+              ketuk atau geser keatas untuk detail Acara
             </p>
             <Button
               variant="ghost"
