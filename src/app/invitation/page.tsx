@@ -1,8 +1,11 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import { Home } from 'lucide-react';
-import Link from 'next/link';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 import Image from 'next/image';
 import CountdownTimer from '@/components/CountdownTimer';
 
@@ -25,11 +28,23 @@ export default function InvitationPage() {
         Kehadiran dan partisipasi bapak/ibu dalam acara ini adalah sebuah
         kehormatan bagi kami.
       </p>
-      <div className="mt-12">
-        <p className="mb-2 text-lg font-semibold">
-          Hitung mundur acara bonataon
-        </p>
-        <CountdownTimer targetDate={targetDate} />
+      <div className="mt-12 w-full max-w-md">
+        <Accordion type="single" collapsible className="w-full">
+          <AccordionItem
+            value="item-1"
+            className="rounded-lg border bg-white/10 px-4"
+            style={{ borderColor: '#ad8330' }}
+          >
+            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
+              Hitung mundur acara bonataon
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="pt-4">
+                <CountdownTimer targetDate={targetDate} />
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
       <Image
         src="/2026.svg"
