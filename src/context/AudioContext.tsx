@@ -13,6 +13,7 @@ const AudioContext = createContext<AudioContextType | null>(null);
 export function AudioProvider({ children }: { children: React.ReactNode }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const wasPlayingRef = useRef(false);
 
   // Initialize Audio on the client side only
   useEffect(() => {
@@ -23,6 +24,34 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       audioRef.current = audio;
     }
   }, []);
+
+  // Effect to handle tab visibility changes
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        // Tab is not visible
+        if (isPlaying) {
+          wasPlayingRef.current = true; // Remember that it was playing
+          audioRef.current?.pause();
+          setIsPlaying(false);
+        }
+      } else {
+        // Tab is visible again
+        if (wasPlayingRef.current) {
+          audioRef.current?.play().catch(e => console.warn("Could not resume audio", e));
+          setIsPlaying(true);
+          wasPlayingRef.current = false; // Reset the flag
+        }
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, [isPlaying]);
 
 
   const play = async () => {
@@ -47,6 +76,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     if (audioRef.current) {
         audioRef.current.pause();
         setIsPlaying(false);
+        wasPlayingRef.current = false; // also reset if user manually pauses
     }
   };
 
