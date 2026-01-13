@@ -44,6 +44,7 @@ export default function HomePage() {
             width={200}
             height={100}
             className="mb-4"
+            priority
           />
         </motion.div>
         <motion.h2

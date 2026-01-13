@@ -45,6 +45,7 @@ export default function RootLayout({
             width={120}
             height={120}
             className="absolute top-4 left-4 z-10"
+            priority
           />
         </Link>
         {children}
