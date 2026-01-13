@@ -20,7 +20,8 @@ function titleCase(str: string) {
 
 export default function Invitation() {
   const searchParams = useSearchParams();
-  const namaTamu = searchParams.get('to') ?? 'Bapak / Ibu';
+  const namaTamuParam = searchParams.get('to') ?? 'Bapak / Ibu';
+  const namaTamu = titleCase(decodeURIComponent(namaTamuParam));
 
   const targetDate = '2026-01-17T09:00:00+07:00';
   const [currentView, setCurrentView] = useState(0); // 0: Invitation, 1: Countdown, 2: Thank You
@@ -66,7 +67,7 @@ export default function Invitation() {
             <div className="mb-8 inline-block rounded-lg border bg-white/10 p-4" style={{ borderColor: '#ad8330' }}>
               <p className="text-lg">Yang terhormat</p>
               <p className="text-2xl font-bold">
-                {titleCase(decodeURIComponent(namaTamu))}
+                {namaTamu}
               </p>
             </div>
 
