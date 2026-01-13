@@ -54,5 +54,6 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image: linear-gradient(to right top, #1c0f2b, #211234, #26153e, #2b1848, #311c52);
   }
 }
