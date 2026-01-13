@@ -11,7 +11,12 @@ export default function InvitationPage() {
 
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center p-4 text-center text-white">
-      <h1 className="text-4xl font-bold mt-8">Kami dari Bisukma Group</h1>
+      <div className="mb-8 rounded-lg border border-white/50 bg-white/10 p-4">
+        <p className="text-lg">Yang terhormat</p>
+        <p className="text-2xl font-bold">"Nama undangan"</p>
+      </div>
+
+      <h1 className="text-4xl font-bold">Kami dari Bisukma Group</h1>
       <p className="mt-4 max-w-2xl">
         Mengundang Bapak/Ibu untuk hadir dan memeriahkan acara Bona Taon ini.
         Kehadiran dan partisipasi bapak/ibu dalam acara ini adalah sebuah
