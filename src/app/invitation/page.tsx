@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import CountdownTimer from '@/components/CountdownTimer';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowDown, ArrowUp, Navigation } from 'lucide-react';
+import { ArrowDown, ArrowUp, Navigation, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function InvitationPage() {
@@ -46,7 +46,7 @@ export default function InvitationPage() {
               ></iframe>
             </div>
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Auditorium+HKBP+Seminarium+Sipoholon"
+              href="https://maps.app.goo.gl/nEchFx8eqK5wrFgQ6"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -91,7 +91,10 @@ export default function InvitationPage() {
             <div className="mt-8 space-y-2">
               <p className="text-base italic font-extralight">Yang akan diselenggarakan Pada</p>
               <h2 className="text-3xl font-bold">17 Januari 2026</h2>
-              <p className="text-lg font-semibold">Pada pukul 09:00 WIB</p>
+              <div className="flex items-center justify-center gap-2">
+                <Clock className="h-6 w-6" />
+                <p className="text-lg font-semibold">Pada pukul 09:00 WIB</p>
+              </div>
               <p className="mt-4 text-base italic font-extralight">Yang beralamat di :</p>
               <p className="max-w-md text-base font-semibold text-white/90">
                 Auditorium HKBP Sipolon Desa Simanungkalit, Kecamatan Sipoholon,
