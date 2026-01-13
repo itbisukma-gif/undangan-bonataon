@@ -12,12 +12,6 @@ export default function InvitationPage() {
         Ini adalah halaman utama untuk undangan Anda. Anda dapat menambahkan semua
         detail acara di sini, seperti tanggal, waktu, lokasi, dan lainnya.
       </p>
-      <Link href="/">
-        <Button variant="outline" className="mt-8 text-white">
-          <Home className="mr-2 h-4 w-4" />
-          Kembali ke Beranda
-        </Button>
-      </Link>
     </div>
   );
 }
