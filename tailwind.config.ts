@@ -14,7 +14,8 @@ export default {
         headline: ['Inter', 'sans-serif'],
         code: ['monospace'],
         handwriting: ['"Dancing Script"', 'cursive'],
-        modern: ['Poppins', 'sans-serif'],
+        modern: ['var(--font-poppins)', 'sans-serif'],
+        tangerine: ['var(--font-tangerine)', 'cursive'],
       },
       colors: {
         background: 'hsl(var(--background))',
