@@ -124,7 +124,6 @@ export default function InvitationPage() {
         height={80}
         className="absolute bottom-8 right-8"
       />
-      <a href="https://lordicon.com/" className="absolute bottom-2 right-2 text-xs text-white/50" target="_blank" rel="noopener noreferrer">Icons by Lordicon.com</a>
     </div>
   );
 }
