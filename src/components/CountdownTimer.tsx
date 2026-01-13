@@ -7,6 +7,12 @@ type CountdownTimerProps = {
 };
 
 const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const calculateTimeLeft = () => {
     // Ensure the date is parsed correctly with timezone information
     const difference = +new Date(targetDate) - +new Date();
@@ -29,24 +35,17 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
     return timeLeft;
   };
 
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-  
-  // No need for isClient state anymore if we initialize timeLeft with calculateTimeLeft
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
   useEffect(() => {
-    // Set initial time left
-    setTimeLeft(calculateTimeLeft());
+    if (!isClient) return;
 
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [targetDate]);
+  }, [isClient, targetDate]);
 
 
   const timeUnits = [
@@ -55,6 +54,10 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
     { label: 'Minutes', value: timeLeft.minutes },
     { label: 'Seconds', value: timeLeft.seconds },
   ];
+  
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <div className="flex items-center justify-center space-x-4">
