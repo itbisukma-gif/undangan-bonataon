@@ -4,6 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { Inter, Poppins, Tangerine } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const tangerine = Tangerine({
@@ -37,13 +38,15 @@ export default function RootLayout({
           poppins.variable
         )}
       >
-        <Image
-          src="/Logo Bisukma Group.svg"
-          alt="Bisukma Group Logo"
-          width={120}
-          height={120}
-          className="absolute top-4 left-4 z-10"
-        />
+        <Link href="/">
+          <Image
+            src="/Logo Bisukma Group.svg"
+            alt="Bisukma Group Logo"
+            width={120}
+            height={120}
+            className="absolute top-4 left-4 z-10"
+          />
+        </Link>
         {children}
         <Toaster />
       </body>
