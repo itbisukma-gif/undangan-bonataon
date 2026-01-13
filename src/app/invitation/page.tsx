@@ -15,8 +15,9 @@ export default function InvitationPage() {
       <CountdownTimer targetDate={targetDate} />
       <h1 className="text-4xl font-bold mt-8">Halaman Undangan</h1>
       <p className="mt-4 max-w-2xl">
-        Ini adalah halaman utama untuk undangan Anda. Anda dapat menambahkan semua
-        detail acara di sini, seperti tanggal, waktu, lokasi, dan lainnya.
+        Kami dari Bisukma Group mengundang Bapak/Ibu untuk hadir dan
+        memeriahkan acara Bona Taon ini. Kehadiran dan partisipasi bapak/ibu
+        dalam acara ini adalah sebuah kehormatan bagi kami.
       </p>
       <Image
         src="/2026.svg"
