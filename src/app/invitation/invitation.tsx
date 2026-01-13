@@ -14,14 +14,20 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-function titleCase(str: string) {
-  return str.replace(/\b\w/g, char => char.toUpperCase());
+function formatNama(slug: string) {
+  return slug
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, char => char.toUpperCase());
 }
+
 
 export default function Invitation() {
   const searchParams = useSearchParams();
-  const namaTamuParam = searchParams.get('to') ?? 'Bapak / Ibu';
-  const namaTamu = titleCase(decodeURIComponent(namaTamuParam));
+  const rawNamaTamu = searchParams.get('to');
+
+  const namaTamu = rawNamaTamu
+    ? formatNama(decodeURIComponent(rawNamaTamu))
+    : 'Bapak / Ibu';
 
   const targetDate = '2026-01-17T09:00:00+07:00';
   const [currentView, setCurrentView] = useState(0); // 0: Invitation, 1: Countdown, 2: Thank You
